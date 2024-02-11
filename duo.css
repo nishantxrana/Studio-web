@@ -1,0 +1,256 @@
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: pp mori;
+    color: #fff;
+    
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.cursor{
+    height: 1vw;
+    width: 1vw;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10;
+    /* transition: all ease-in-out .1s; */
+    mix-blend-mode:difference;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cursor>h1{
+    font-size: .8vw;
+    display: none;
+    
+}
+
+.main{
+    background-color: #0f0d0d;
+}
+.page1{
+    min-height:100vh;
+    width: 100%;
+    position: relative;
+}
+nav{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5vw;
+    height: 3vw;
+    
+}
+.nav-img{
+    height: 4vw;
+    
+}
+.nav-button{
+    height: 1.5vw;
+    width: 1.5vw;
+    background-color: crimson;
+    border-radius: 50%;
+}
+.nav-list{
+    display: flex;
+    gap: 2vw;
+    letter-spacing: .1vw;
+}
+.nav-list h3{
+    font-size: .9vw;
+    font-weight: 500;
+}
+
+.page1>h1{
+    font-size: 8vw;
+    font-family: PP mori;
+    margin-top: 10vw;
+    margin-left: 7vw;
+    font-weight: 400;
+}
+.page1>h2{
+    font-size: 8vw;
+    font-family: pp mori;
+    margin-left: 23vw;
+    font-weight: 400;
+ }
+.introv{
+     width: 60%;
+     margin-top: 10vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    
+
+}
+
+/* page2 styling starts */
+
+.page2{
+    min-height:80vh;
+    width: 100%;
+    padding: 8vw 5vw;
+    border-bottom: .1vw solid #0f0d0d;
+ }
+
+ .page2>h1{
+    font-size: 7vw;
+    font-weight: 300;
+    color: #0f0d0d;
+    
+}
+.page2 .container{
+    width: 100%;
+    margin-top: 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center1;
+}
+.container .left{
+    width: 30%;
+}
+.container .left h2{
+    font-size: 3.5vw;
+    font-weight: 200;
+    line-height: 3.5vw;
+    color: #0f0d0d;
+}
+
+.container .right{
+    width:  20% ;
+}
+.container .right p{
+    font-size: 1.3vw;
+    font-weight: 200;
+    line-height: 1.7vw;
+    color: #0f0d0d;
+ }
+ 
+ .container .right button{
+    margin-top: 1vw;
+    width: 100%;
+    background-color: rgb(205, 80, 105);
+    color:#0f0d0d;
+    border-radius: 1vw;
+    border: none;
+    font-size: 1.1vw;
+    padding: .3vw;
+ }
+
+
+ /* page 3 styling starts here */
+
+ .page3{
+    min-height: 100vh;
+    width: 100%;
+    padding: 8vw 5vw;
+    border-bottom: .1vw solid #0f0d0d;
+
+
+ }
+
+ .page3 h1{
+    color: #0f0d0d;
+    font-size: 7vw;
+    font-weight: 400;
+    text-transform: uppercase;
+ }
+ 
+
+ .frame{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 5vw;
+ }
+ .frame-common{
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between ;
+     align-items: flex-start;
+    
+    
+ }
+ .frame img{
+    margin-top: 8vw;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: .5vw;
+ }
+ .frame video{
+    height: 30vw;
+    width: 30vw;
+    border-radius: .5vw;
+    object-fit: cover;
+ }
+ .frame h2{
+    color: #0f0d0d;
+    font-weight: 100;
+    font-size: 1.3vw;
+    
+    
+ }
+ .frame h2 span{
+    color: #0f0d0d;
+    font-weight: 500;
+    font-size: 1.6vw;
+    margin-right: 2vw;
+ }
+ .frameL,.frameR{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+ }
+ .frameR{
+    width: 30vw;
+ }
+
+ .p3-end-container{
+    height: 12vw;
+    margin-top: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 7vw;
+ }
+
+ .p3-end-container h1{
+    color: #0f0d0d;
+    font-size: 3.5vw;
+    font-weight: 400;
+    text-transform: uppercase;
+ }
+ .p3-end-container button{
+    height: 12vw;
+    width: 12vw;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: #0f0d0d;
+    transition: all ease .5s;
+ }
+
+
+ /* page 4 styling start */
+
+ .page4{
+    min-height: 100vw;
+    width: 100%;
+    background-color: blue;
+ }
+ .page5{
+    min-height: 100vw;
+    width: 100%;
+    background-color: crimson;
+ }
+
+ 
