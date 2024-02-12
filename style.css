@@ -99,6 +99,7 @@ nav{
     width: 100%;
     padding: 8vw 5vw;
     border-bottom: .1vw solid #0f0d0d;
+    position: relative;
  }
 
  .page2>h1{
@@ -153,6 +154,7 @@ nav{
     width: 100%;
     padding: 8vw 5vw;
     border-bottom: .1vw solid #0f0d0d;
+    position: relative;
 
 
  }
@@ -243,14 +245,70 @@ nav{
  /* page 4 styling start */
 
  .page4{
-    min-height: 100vw;
+    min-height: 55vw;
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
+    padding: 8vw 5vw;
+    padding-top: 14vw;
+    position: relative;
+    border-bottom: 1px solid #fff;
+
  }
+
+ .page4 .anime-c{
+    display: flex;
+    height: 8vw;
+    /* margin-top: 10vw; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: cadetblue; */
+    gap: 2vw;
+    position: relative;
+ }
+ .anime-c img{
+    transform: rotate(5deg);
+    transition: all ease-in-out .3s;
+    opacity: 0;
+ }
+ 
+
+ .anime-c img:nth-child(1)
+ {
+    height: 20vw;
+ }
+ .anime-c img:nth-child(3)
+ {
+    height: 32vw;
+ }
+ .anime-text{
+    /* background-color: red; */
+    height: 8vw;
+    position: relative;
+    overflow: hidden;
+    
+ }
+ .anime-c:hover h1{
+    transform: translateY(-100%)  ;
+    color: pink;
+    
+ }
+ .anime-c:hover img{
+    transform: rotate(0deg);
+    opacity: .9;
+    
+ }
+ .anime-text h1{
+    font-size: 7.5vw;
+    transition: all linear .2s;
+
+ }
+
+ /* page 5 styling start */
  .page5{
     min-height: 100vw;
     width: 100%;
     background-color: crimson;
+
  }
 
  
