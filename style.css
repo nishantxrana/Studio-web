@@ -1,10 +1,13 @@
- 
+@font-face {
+   font-family: 'pp mori';
+   src: url(./PPMori-Regular.otf);
+} 
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: pp mori;
+    font-family: 'pp mori';
     color: #fff;
     
 }
