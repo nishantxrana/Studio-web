@@ -23,12 +23,15 @@ html,body{
     border: none;
     border-radius: 50%;
     position: fixed;
-    z-index: 10;
-    /* transition: all ease-in-out .1s; */
     mix-blend-mode:difference;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 101;
+     
+}
+body{
+   background-color: #0f0d0d;
 }
 .cursor>h1{
     font-size: .8vw;
@@ -38,11 +41,17 @@ html,body{
 
 .main{
     background-color: #0f0d0d;
+    cursor:none;
+    position: relative;
+    z-index: 8;
+    
 }
 .page1{
     min-height:100vh;
     width: 100%;
     position: relative;
+    z-index: 11;
+    padding-top: 10vw;
 }
 nav{
      display: flex;
@@ -50,18 +59,115 @@ nav{
     align-items: center;
     padding: 0 1.5vw;
     height: 3vw;
+    background-color: #0f0d0d;
+    mix-blend-mode: difference;
+    position: relative;
+    z-index: 9;
+    cursor: none;
     
 }
+
+/* prank */
+.ricksir{
+   background-color: pink;
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   z-index: 100;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}
+.ricksir video{
+   position: relative;
+   left: 50%;
+   transform: translate(-50%,10%);
+}
+
+
+
+
+
+
+
+
+
+
+.pinkCover{
+   background-color: pink;
+   position: absolute;
+   height: 100vh;
+   width: 100%;
+   display: none;
+   z-index: 100;
+   
+}
+
+
+
+.scroller{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.parent{
+   /* background-color: red; */
+   white-space: nowrap;
+   overflow-x: auto;
+   overflow-y: hidden;
+}
+.parent::-webkit-scrollbar{
+   display: none;
+}
+.child{
+   display: inline-block;
+   white-space: nowrap;
+   animation-name: scrr;
+   animation-duration: 10s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+.child h4{
+   display: inline-block;
+   font-size: 5vw;
+   margin-right: 2vw;
+   /* transition: all linear 3s; */
+}
+@keyframes scrr {
+   from{
+      transform: translateX(0);
+   }
+   to{
+      transform: translateX(-100%);
+   }
+}
+
+
+
+
+
+
+
 .nav-img{
-    height: 4vw;
+    height: 3vw;
     
 }
 .nav-button{
-    height: 1.5vw;
-    width: 1.5vw;
+    height: 2.5vw;
+    width: 2.5vw;
     background-color: crimson;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.nav-button i{
+   font-size: 2.5vw;
+}
+
 .nav-list{
     display: flex;
     gap: 2vw;
@@ -75,7 +181,7 @@ nav{
 .page1>h1{
     font-size: 8vw;
     font-family: PP mori;
-    margin-top: 10vw;
+    
     margin-left: 7vw;
     font-weight: 400;
 }
@@ -103,6 +209,7 @@ nav{
     padding: 8vw 5vw;
     border-bottom: .1vw solid #0f0d0d;
     position: relative;
+    z-index: 11;
  }
 
  .page2>h1{
@@ -158,6 +265,7 @@ nav{
     padding: 8vw 5vw;
     border-bottom: .1vw solid #0f0d0d;
     position: relative;
+    z-index: 11;
 
 
  }
@@ -255,6 +363,8 @@ nav{
     padding-top: 14vw;
     position: relative;
     border-bottom: 1px solid #fff;
+    position: relative;
+    z-index: 11;
 
  }
 
@@ -308,10 +418,57 @@ nav{
 
  /* page 5 styling start */
  .page5{
-    min-height: 100vw;
+    min-height: 70vw;
     width: 100%;
-    background-color: crimson;
+    /* background-color: crimson; */
+    position: relative;
+    z-index: 9;
+    padding: 8vw 5vw;
 
  }
 
- 
+ .box-heading{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 2vw;
+ }
+.box-heading h1{
+   font-size: 4.5vw;
+   text-transform: uppercase;
+   font-weight: 500;
+}
+ .box-heading h2{
+   font-size: 1vw;
+   text-transform: uppercase;
+ }
+
+ .box-content{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2vw 0 1.7vw 0;
+   border-top: 1px solid #fff;
+   /* background-color: rosybrown; */
+   margin-bottom: .3vw;
+   
+ }
+ .last{
+   border-bottom: 1px solid #fff;
+ }
+ .box-content h1{
+   font-size: 1.5vw;
+   font-weight: 500;
+ }
+ .box-content h2,.box-content h3{
+   font-size: 1vw;
+   font-weight: 400;
+ }
+ .box-date{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 8vw;
+ }
+
+ /* footer styling  */

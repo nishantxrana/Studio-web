@@ -32,15 +32,20 @@ ScrollTrigger.refresh();
 locoScroll();
 
 var crsr = document.querySelector(".cursor");
-var main = document.querySelector(".main");
+var main = document;
 var vid = document.querySelector(".introv");
 var crsrText = document.querySelector(".cursor h1");
 var p3Button = document.querySelector(".p3-end-container button")
+var bigcrsr;
 
 main.addEventListener("mousemove",function(val){
     crsr.style.left = val.x  +"px";
-    crsr.style.top = val.y  + "px";
-    // crsr.style.top =  +  "px";
+    crsr.style.top = val.y  + 2 + "px";
+    bigcrsr = function(value){
+      crsr.style.left = val.x - value + "px";
+      crsr.style.top = val.y - value + "px";
+
+    }
 
 })
 
@@ -78,6 +83,120 @@ p3Button.addEventListener("mouseleave",function(){
 
 
 })
+
+// page 5 animations
+
+var val = document.querySelectorAll(".box-content");
+
+
+val.forEach(function(data){
+ var imageAdd =  data.getAttribute('data-image');
+ 
+ data.addEventListener("mouseenter",function(){
+  crsr.style.height = "20vw";
+  crsr.style.width = "20vw";
+  crsr.style.borderRadius = "0";
+  crsr.style.transition = "width ease-in-out .5s, height ease-in-out .5s";
+  crsr.style.transform = "translate(-50%,0)";
+  crsr.style.backgroundImage =  `url(${imageAdd})`;
+  main.style.cursor = "wait";
+  // bigcrsr(160);
+  
+
+
+ })
+ data.addEventListener("mouseleave",function(){
+  crsr.style.height = "1vw";
+  crsr.style.width = "1vw";
+  crsr.style.borderRadius = "50%";
+  crsr.style.transition = "all ease";
+  crsr.style.backgroundImage =  "none";
+
+  main.style.cursor = "none";
+ })
+
+})
+
+
+
+// animating pink cover
+var navbar = document.querySelector("nav");
+var pinkcover = document.querySelector(".pinkCover");
+var HOME = document.querySelector("#home");
+var WORK = document.querySelector("#work");
+var STUDIO = document.querySelector("#Studio");
+var CONTACT = document.querySelector("#contact");
+var allAnimationText = document.querySelectorAll('.aText');
+
+// Function to animate navigation bar
+
+function animagteNav(name){
+  name.addEventListener("mouseenter",function(val){
+    allAnimationText.forEach(function(ele){
+      ele.textContent = `${name.textContent}`;
+    })
+    pinkcover.style.display = "block";
+    navbar.style.backgroundColor = "pink";
+    name.style.borderBottom = "solid 1px #fff";
+    navbar.style.mixBlendMode = "normal";
+    
+  })
+  name.addEventListener("mouseleave",function(val){
+    pinkcover.style.display = "none";
+    navbar.style.backgroundColor = "#0f0d0d";
+    name.style.borderBottom = "none";
+    navbar.style.mixBlendMode = "difference";
+  })
+}
+animagteNav(HOME);
+animagteNav(WORK);
+animagteNav(STUDIO);
+animagteNav(CONTACT);
+
+
+
+// prankinnnngggggg
+
+var navButton = document.querySelector(".nav-button");
+var rickSir = document.querySelector(".ricksir");
+var rickvideo = document.querySelector(".ricksir video")
+var rickaudio = document.querySelector(".ricksir audio")
+
+
+navButton.addEventListener("mouseenter",function(){
+  rickSir.style.display = "block";
+  rickvideo.play();
+  rickvideo.currentTime = 0;
+  rickaudio.play();
+  rickaudio.currentTime = 0;
+  navbar.style.backgroundColor = "pink";
+  navbar.style.mixBlendMode = "normal";
+  
+  
+})
+navButton.addEventListener("mouseleave",function(){
+  navbar.style.backgroundColor = "#0f0d0d";
+  rickSir.style.display = "none";
+  rickvideo.pause();
+  navbar.style.mixBlendMode = "difference";
+  rickaudio.pause();
+  
+})
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
